@@ -1,0 +1,11 @@
+.sketches-tags-container {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .tag-element {
+        width: 18%;
+        padding: 2px;
+    }
+}

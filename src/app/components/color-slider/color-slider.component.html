@@ -1,0 +1,11 @@
+<div class="slider-container">
+  <div class="slider-title">{{title}}</div>
+  <div class="slider-elements">
+      <div class="slider-bar-container" id="slider-bar-container" (click)="onBarClick($event)">
+          <div class="slider-bar" id="slider-bar"></div>
+      </div>
+      <div class="slider-circle" *ngFor="let circle of circles" [id]="circle.id" tabindex="0" (mousedown)="onMouseDown($event)"  (mouseup)="onMouseUp($event)">
+        <div class="slider-circle-info" [id]="circle.circleInfoId">{{circle.position}}</div>
+      </div>
+  </div>
+</div>

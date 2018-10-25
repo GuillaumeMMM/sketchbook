@@ -1,0 +1,11 @@
+<div class="sketch-container" [id]="'sketch-container-' + sketch.id" (mouseover)="onMouseAction('in')" (mouseout)="onMouseAction('out')">
+  <div class="sketch-title">
+    {{sketch.title}}
+  </div>
+  <div class="sketch-content">
+
+  </div>
+  <div class="sketch-tags">
+    <div class="sketch-tag" *ngFor="let tag of sketch.tags"><a href="#">{{tag}}</a></div>
+  </div>
+</div>

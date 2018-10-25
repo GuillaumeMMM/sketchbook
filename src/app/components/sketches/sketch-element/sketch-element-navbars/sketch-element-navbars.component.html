@@ -1,0 +1,5 @@
+<div class="sketch-navbar-container">
+  <app-sketch-element-navbars-navigation (handleChangeTab)="handleChangeRoute($event)"></app-sketch-element-navbars-navigation>
+  <app-sketch-element-navbars-shadows *ngIf="currentRoute === 'shadows'"></app-sketch-element-navbars-shadows>
+  <app-sketch-element-navbars-colors *ngIf="currentRoute === 'colors'"></app-sketch-element-navbars-colors>
+</div>

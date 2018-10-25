@@ -1,0 +1,24 @@
+<div class="color-navbar">
+  <div class="color-title">
+    Color navbar
+    <div class="color-navbars-content">
+      <div class="container-1" (mouseover)="animateNavbar1('in')" (mouseout)="animateNavbar1('out')">
+        <div class="navbar">
+          <ul>
+            <li><a href="/sketches/navigation">home</a></li>
+            <li><a href="/sketches/navigation">activities</a></li>
+            <li><a href="/sketches/navigation">timetable</a></li>
+            <li><a href="/sketches/navigation">contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <app-color-slider [title]="'Transparency'" [min]="0" [max]="100" [step]="1" [circles]="circles1" (handlePositionChange)="onPositionChange($event)"></app-color-slider>
+      <br>
+      <app-color-slider [title]="'Red'" [min]="0" [max]="255" [step]="1" [circles]="circles2" (handlePositionChange)="onPositionChangeRed($event)"></app-color-slider>
+      <br>
+      <app-color-slider [title]="'Blue'" [min]="0" [max]="255" [step]="1" [circles]="circles4" (handlePositionChange)="onPositionChangeGreen($event)"></app-color-slider>
+      <br>
+      <app-color-slider [title]="'Green'" [min]="0" [max]="255" [step]="1" [circles]="circles3" (handlePositionChange)="onPositionChangeBlue($event)"></app-color-slider>
+    </div>
+  </div>
+</div>

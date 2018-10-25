@@ -1,0 +1,38 @@
+* {
+    
+}
+
+.navigation-container {
+    display: flex;
+    height: 7vh;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+    ul {
+        height: 70%;
+        border-bottom: 1px solid white;
+        display: flex;
+
+        .active {
+            border-bottom: 2px solid white;
+        }
+
+        li {
+            list-style: none;
+            padding: 0 20px;
+            font-weight: 200;
+            height: 100%;
+            box-sizing: border-box;
+            cursor: pointer;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+        li:hover {
+            border-bottom: 2px solid #41d6c3;
+        }
+    }
+}

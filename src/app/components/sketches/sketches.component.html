@@ -1,0 +1,13 @@
+<div class="sketches-container">
+  <div class="sketches-title">
+    <p>Numerical sketches, among other things.</p>
+  </div>
+  <!-- <div class="sketches-tags">
+    <app-sketches-tags [sketches]="sketches"></app-sketches-tags>
+  </div> -->
+  <div class="sketches">
+    <div class="sketch-element" *ngFor="let sketch of sketches; let i = index">
+      <a [href]="sketches[i].route"><app-sketch-element [sketch]="sketches[i]"></app-sketch-element></a>
+    </div>
+  </div>
+</div>

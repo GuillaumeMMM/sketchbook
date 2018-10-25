@@ -1,0 +1,13 @@
+<div class="header-container">
+  <a href="/sketches">
+    <div class="header-title" (mouseover)="onTitleMouseover('in')" (mouseout)="onTitleMouseover('out')">
+      G M.M.M.
+    </div>
+  </a>
+  <div class="header-navbar">
+    <ul>
+      <li class="active" (click)="setActive('sketches')"><a href="/sketches">Sketches</a></li>
+      <li><a href="/contact" (click)="setActive('contact')">Contact</a></li>
+    </ul>
+  </div>
+</div>

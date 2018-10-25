@@ -1,0 +1,37 @@
+.sketches-container {
+    height: 90vh;
+
+    .sketches-title {
+        height: 20vh;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 100;
+        font-size: 2em;
+        color: #152935;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .sketches-tags {
+        height: 10vh;
+    }
+
+    .sketches {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .sketch-element {
+            width: 30vw;
+            height: 30vw;
+            padding: 10px 10px;
+
+            a {
+                text-decoration: none;
+                color: #152935;
+            }
+        }
+    }
+}
