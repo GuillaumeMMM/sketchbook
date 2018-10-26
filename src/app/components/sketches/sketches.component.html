@@ -6,7 +6,7 @@
     <app-sketches-tags [sketches]="sketches"></app-sketches-tags>
   </div> -->
   <div class="sketches">
-    <div class="sketch-element" *ngFor="let sketch of sketches; let i = index">
+    <div class="sketch-element" [id]="'sketch-element-' + sketch.id" *ngFor="let sketch of sketches; let i = index">
       <a [href]="sketches[i].route"><app-sketch-element [sketch]="sketches[i]"></app-sketch-element></a>
     </div>
   </div>

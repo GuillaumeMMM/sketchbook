@@ -10,6 +10,16 @@
 
         display: flex;
         align-items: center;
+
+        @media (max-width: 800px) {
+            margin-left: 3vh;
+            font-size: 1.5em;
+        }
+
+        @media (max-width: 400px) {
+            margin-left: 5vh;
+            font-size: 1.2em;
+        }
     }
 
     .sketches-tags {
@@ -24,13 +34,34 @@
         justify-content: center;
 
         .sketch-element {
-            width: 30vw;
-            height: 30vw;
+            width: 25vw;
+            height: 25vw;
             padding: 10px 10px;
+            opacity: 0;
+            margin-top: 20px;
 
             a {
                 text-decoration: none;
                 color: #152935;
+            }
+        }
+
+        @media (max-width: 1150px) {
+            .sketch-element {
+                width: 35vw;
+                height: 35vw;
+            }
+        }
+
+        @media (max-width: 800px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .sketch-element {
+                width: 60vw;
+                height: 60vw;
             }
         }
     }

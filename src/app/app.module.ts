@@ -18,10 +18,12 @@ import { SketchElementNavbarsShadowsComponent } from './components/sketches/sket
 import { SketchElementNavbarsNavigationComponent } from './components/sketches/sketch-element/sketch-element-navbars/sketch-element-navbars-navigation/sketch-element-navbars-navigation.component';
 import { SketchElementNavbarsColorsComponent } from './components/sketches/sketch-element/sketch-element-navbars/sketch-element-navbars-colors/sketch-element-navbars-colors.component';
 import { ColorSliderComponent } from './components/color-slider/color-slider.component';
+import { SketchElementGradientSliderComponent } from './components/sketches/sketch-element/sketch-element-gradient-slider/sketch-element-gradient-slider.component';
 
 const appRoutes: Routes = [
   { path: 'sketches', component: SketchesComponent },
   { path: 'sketches/navigation', component: SketchElementNavbarsComponent },
+  { path: 'sketches/slider', component: SketchElementGradientSliderComponent },
   { path: 'contact', component: ContactComponent },
   { path: '',
     redirectTo: 'sketches',
@@ -43,7 +45,8 @@ const appRoutes: Routes = [
     SketchElementNavbarsShadowsComponent,
     SketchElementNavbarsNavigationComponent,
     SketchElementNavbarsColorsComponent,
-    ColorSliderComponent
+    ColorSliderComponent,
+    SketchElementGradientSliderComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes), SliderModule

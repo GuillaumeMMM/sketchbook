@@ -55,6 +55,10 @@
                         color: white;
                         font-weight: lighter;
                     }
+
+                    @media (max-width: 400px) {
+                        font-size: 0.6em;
+                    }
                 }
     
                 li:hover {

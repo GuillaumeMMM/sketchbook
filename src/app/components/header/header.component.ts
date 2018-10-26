@@ -1,17 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 import * as anime from 'animejs';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  constructor(public router: Router, public route: ActivatedRoute) { }
 
   ngOnInit() {
+
+  }
+
+  ngAfterViewInit() {
+    const initialRoute = location.pathname.substr(1, location.pathname.length - 1);
+
+    if (initialRoute === 'contact') {
+      document.getElementsByClassName('active')[0].classList.remove('active');
+      document.getElementsByClassName(initialRoute)[0].classList.add('active');
+    }
   }
 
   onTitleMouseover(action) {
@@ -32,11 +43,9 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  // setActive(route) {
-  //   switch (route) {
-  //     case 'sketches':
-
-  //   }
-  // }
-
+  setActive(route) {
+    document.getElementsByClassName('active')[0].classList.remove('active');
+    document.getElementsByClassName(route)[0].classList.add('active');
+    this.router.navigate(['/' + route]);
+  }
 }

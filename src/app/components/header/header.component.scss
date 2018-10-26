@@ -21,10 +21,19 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
+
+        @media (max-width: 400px) {
+            font-size: 1em;
+            padding: 0 10px;
+        }
     }
 
     .header-navbar {
         padding: 0 30px;
+
+        @media (max-width: 400px) {
+            padding: 0 10px;
+        }
         
         ul {
             list-style: none;
@@ -38,6 +47,7 @@
                     color: #152935;
                     display: flex;
                     flex-direction: column;
+                    cursor: pointer;
                 }
             }
 

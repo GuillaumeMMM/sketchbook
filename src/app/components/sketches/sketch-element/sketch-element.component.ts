@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
 
 import * as anime from 'animejs';
+import { AUTO_STYLE } from '@angular/core/src/animation/dsl';
 
 @Component({
   selector: 'app-sketch-element',
@@ -28,28 +29,26 @@ export class SketchElementComponent implements OnInit, AfterViewInit {
   }
 
   editBackground() {
-    document.getElementById('sketch-container-' + this.sketch['id'])['style'].backgroundColor = this.sketch['colors'][0];
-    document.getElementById('sketch-container-' + this.sketch['id'])['style'].backgroundImage = 'linear-gradient(0deg, ' + this.sketch['colors'][1] + ' 0%, ' + this.sketch['colors'][2] + ' 100%)';
+    // document.getElementById('sketch-container-' + this.sketch['id'])['style'].backgroundColor = this.sketch['colors'][0];
+    // document.getElementById('sketch-container-' + this.sketch['id'])['style'].backgroundImage = 'linear-gradient(0deg, ' + this.sketch['colors'][1] + ' 0%, ' + this.sketch['colors'][2] + ' 100%)';
   }
 
   onMouseAction(action) {
-    clearInterval(this.interval);
+    const element = document.getElementById('sketch-img-' + this.sketch['id']);
+    anime.remove(element);
     switch (action) {
       case 'in':
-      this.interval = setInterval(() => {
-        if (this.angle < 90 ) {
-          this.angle += 6;
-        }
-        document.getElementById('sketch-container-' + this.sketch['id'])['style'].backgroundImage = 'linear-gradient(' + this.angle + 'deg, ' + this.sketch['colors'][1] + ' 0%, ' + this.sketch['colors'][2] + ' 100%)';
-      }, 100);
+        anime({
+          targets: element,
+          opacity: 1,
+        });
       break;
       case 'out':
-      this.interval = setInterval(() => {
-        if (this.angle > 0 ) {
-          this.angle -= 6;
-        }
-        document.getElementById('sketch-container-' + this.sketch['id'])['style'].backgroundImage = 'linear-gradient(' + this.angle + 'deg, ' + this.sketch['colors'][1] + ' 0%, ' + this.sketch['colors'][2] + ' 100%)';
-      }, 100);
+        anime({
+          targets: element,
+          opacity: 0.8,
+        });
+      break;
     }
   }
 
